@@ -23,7 +23,7 @@ describe('Engineer Class', () => {
     })
 
     describe("Get Engineer role", () => {
-        it("should return the manager's role when the method is called", () => {
+        it("should return the engineer's role when the method is called", () => {
             const newEngineer = new Engineer("testName", "testId", "testEmail", "testUsername");
 
             const returnedRole = newEngineer.getRole();
