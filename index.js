@@ -9,7 +9,31 @@ const Intern = require("./lib/intern");
 
 // Parameters
 // User input: use temporary array for each input instance, then a spread operator to pass the items into each relevant class constructor
+const userInput = [];
 // employees: use an array to store all objects generated from the user input and pass to the template functions
+const employees = [];
+// Base questions: store questions applicable for all employee types
+const baseQuestions = [
+    {
+        type: 'input',
+        message: 'Please insert the employees name:',
+        name: 'name',
+    },
+    {
+        type: 'input',
+        message: 'Please insert the employees ID:',
+        name: 'id'
+    },
+    {
+        type: 'input',
+        message: 'Please insert the employees email:',
+        name: 'email',
+    }
+];
+
+// Functions
+// 1. Generate the additional prompts based on selected employee type
+
 
 // Pseudocode
 // 1. Gather inputs from user using inquirer
