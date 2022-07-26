@@ -8,15 +8,6 @@ const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const QuestionSet = require("./lib/questions");
 
-// Parameters
-// User input: use temporary array for each input instance, then a spread operator to pass the items into each relevant class constructor
-let userInput;
-// employees: use an array to store all objects generated from the user input and pass to the template functions
-const employees = [];
-// Base questions: store questions applicable for all employee types
-
-
-
 // Pseudocode
 // 1. Gather inputs from user using inquirer
 //  1a. On first iteration, set class to manager
