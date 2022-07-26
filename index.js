@@ -6,6 +6,7 @@ const fs = require("fs");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
+const QuestionSet = require("./lib/questions");
 
 // Parameters
 // User input: use temporary array for each input instance, then a spread operator to pass the items into each relevant class constructor
