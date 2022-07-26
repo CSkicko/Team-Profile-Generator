@@ -3,10 +3,11 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Import classes
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
-const QuestionSet = require("./lib/questions");
+const Prompter = require("./lib/prompter");
+
+const myPrompter = new Prompter();
+
+myPrompter.start();
 
 // Pseudocode
 // 1. Gather inputs from user using inquirer
