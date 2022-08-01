@@ -27,7 +27,7 @@ To initiate the Team Profile Generator, navigate to the relevant directory and r
 node index.js
 ```
 The following video provides a walkthrough, detailing how the application can be used: 
-**WALKTHROUGH VIDEO**
+[Walkthrough Video](./walkthrough.mp4)
 
 ## Collaborators
 The following personnel have been involved in the devleopment of this application:
