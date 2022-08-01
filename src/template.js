@@ -23,7 +23,7 @@ function createTemplate(details){
                                 <div class="row justify-content-center">`;
     
     // Set second part of html code
-    let htmlPart2;
+    let htmlPart2 = [];
     for(employee of details){
         const type = employee.getRole();
         let icon;
@@ -40,7 +40,7 @@ function createTemplate(details){
                 break;
             case "Engineer":
                 icon = '<i class="fa-solid fa-glasses p-1"></i>';
-                variableInfo = `Github Account: <a href='github.com/${employee.github}'>${employee.github}</a>`;
+                variableInfo = `Github Account: <a target = '_blank' href='https://github.com/${employee.github}'>${employee.github}</a>`;
                 break;
             case "Intern":
                 icon = '<i class="fa-solid fa-graduation-cap p-1"></i>';
@@ -48,25 +48,25 @@ function createTemplate(details){
                 break;
         }
 
-        htmlPart2 = `<div class="col-4">
+        htmlPart2.push(`<div class="col-4">
                         <div class="card mb-4">
                             <div class="card-body bg-info">
                                 <h5 class="card-title text-light">${name}</h5>
                                 <h6 class="card-subtitle mb-2 text-light">${icon}${type}</h6>
                                 <ul class="list-group">
                                     <li class="list-group-item">ID: ${id}</li>
-                                    <li class="list-group-item">Email: ${email}</li>
+                                    <li class="list-group-item">Email: <a href='mailto:${email}'>${email}</a></li>
                                     <li class="list-group-item">${variableInfo}</li>
                                 </ul>
                             </div>
                         </div>
-                    </div>`;
+                    </div>`);
     }
     
     // Set third part of html code
     const htmlPart3 = `</div></div></body></html>`;
 
-    const html = (htmlPart1 + htmlPart2 + htmlPart3);
+    const html = (htmlPart1 + [...htmlPart2] + htmlPart3);
     fs.writeFileSync('./dist/index.html', html);
 };
 
